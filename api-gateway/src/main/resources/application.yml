@@ -1,0 +1,17 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.10.195:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 让gateway可以发现nacos中的微服务
+    sentinel:
+      transport:
+        port: 9999 #跟控制台交流的端⼝,随意指定⼀个未使⽤的端⼝即可
+        dashboard: 192.168.10.195:8858 # 指定控制台服务的地址
