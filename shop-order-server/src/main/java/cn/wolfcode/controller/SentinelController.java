@@ -22,6 +22,7 @@ public class SentinelController {
     @RequestMapping("/sentinelTwo")
     public String sentinelTwo(){
         log.info("你好世界");
+        log.info("你好ALexLiu");
         return "sentinelTwo";
     }
 }
